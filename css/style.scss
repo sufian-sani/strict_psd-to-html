@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+$primaryColor : #2d3950;
+$secondaryColor : #15a4fa;
+$bgColor : #F6F9F9;
+$paragraphColor : #999999;
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: $primaryColor;
+}
+
+%transition{
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
+%gradient{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+50,5fc3ff+50 */
+	background: #48baff; /* Old browsers */
+	background: -moz-linear-gradient(left,  #48baff 50%, #5fc3ff 50%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #48baff 50%,#5fc3ff 50%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #48baff 50%,#5fc3ff 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 ); /* IE6-9 */
+}
+
+.btn-custom{
+	border: 1px solid $secondaryColor;
+	color: #fff;
+	padding: 13px 30px;
+
+	&:hover{
+		background-color: $secondaryColor;
+		color: #fff;
+	}
+}
+
+.navbar{
+	background-color: $bgColor;
+	padding: 30px 0;
+	.navbar-nav{
+		.nav-item{
+			.nav-link{
+				color: $primaryColor;
+				font-weight: 600;
+				text-transform: uppercase;
+				@extend %transition;
+
+				&:hover{
+					color: $secondaryColor;
+				}
+			}
+		}
+	}
+}
+
+#banner{
+	background-image: url(../img/Strict.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	.click{
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		a{
+			color: #fff;
+			font-size: 20px;
+		}
+	}
+	.row{
+		height: 85vh;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		h1{
+			font-size: 120px;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		span{
+			background:$secondaryColor;
+			display: block;
+			height: 3px;
+			margin-bottom: 20px;
+		}
+		p{
+			color: #fff;
+			font-size: 18px;
+		}
+	}
+}
+
+#about-us{
+	background-color: $bgColor;
+	text-align: center;
+	padding: 40px 0;
+	h2{
+		font-size: 35px;
+		font-weight: 500;
+		color: $primaryColor;
+		margin-bottom: 15px;
+	}
+	p{
+		color: $paragraphColor;
+		font-size: 18px;
+	}
+}
+
+#service-section{
+	padding: 100px 0;
+	text-align: center;
+	.service{
+		.icon{
+			@extend %gradient;
+			width: 100px;
+			height: 100px;
+			color: #fff;
+			font-size: 50px;
+			text-align: center;
+			line-height: 100px;
+			margin: auto;
+			margin-bottom: 20px;
+			i{
+				text-shadow: 1px 1px 2px #2d3950;
+			}
+		}
+		h2{
+			font-size: 22px;
+			font-weight: 600;
+			color: $primaryColor;
+		}
+		P{
+			color: $paragraphColor;
+		}
+	}
+}
+
+#gallery{
+	background-color: #F6F9F9;
+	padding-bottom: 100px;
+	h2{
+		font-size: 40px;
+	}
+	p{
+		color: $paragraphColor;
+		margin-bottom: 55px;
+	}
+	.overly_wrap{
+		position: relative;
+		display: block;
+		margin-bottom: 25px;
+	.image{
+		width: 356px;
+		height: 100%;
+	}
+
+	.overlay{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		/**left: auto;
+		right: auto;**/
+		width: 356px;
+		height: 100%;
+		margin: 0 auto;
+		opacity: 0;
+		transition: .3s ease;
+		background-color: #2AACFA;
+		&:hover{
+			opacity: 0.8;
+		}
+
+	.overly_images{
+		margin-top: 33.33%;
+		a{
+			margin-top: 30%;
+			margin-right: 7px;
+			padding: 10px 13px;
+			border: 1px solid #fff;
+			color: #fff;
+			border-radius: 5px;
+			&:hover{
+			   background-color: #15A4FA; 
+			}
+		}
+	}
+	}
+	}
+}
+#form-section{
+	background-image: url(../img/contact.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba(71, 64, 97, 0.90);
+    background-blend-mode: lighten;
+    h2{
+    	color: #fff;
+    	font-size: 40px;
+    }
+    p{
+    	color: $paragraphColor;
+		margin-bottom: 40px;
+    }
+    input, textarea{
+		border-color: $paragraphColor;
+		border-radius: 2px;
+		color: #fff;
+		background-color: transparent;
+	}
+	.submit-option{
+	.check_box{
+		margin-top: 10px;
+		float: left;
+		position: relative;
+		input[type=checkbox]{
+			display: none;
+		}
+		input[type=checkbox] + label:before{
+			content: "";
+			height: 20px;
+			width: 20px;
+			border: 1px solid #9AA0A9;
+			background: #9AA0A9;
+			display: inline-block;
+			vertical-align: top;
+			border-radius: 5px;
+			margin-top: 3px;
+			margin-right: 10px;
+		}
+		input[type=checkbox]:checked + label:before{
+			content: "\2713";
+			text-align: center;
+			font-size: 13px;
+			background: #fff;
+			border: 1px solid #fff;
+		}
+		label{
+			cursor: pointer;
+		}
+		span{
+			color: #ffffff;
+		}
+		/**label{
+			color: #ffffff;
+			font-size: 15px;
+			margin: 5px 0px 0 5px;
+		}**/
+	}
+	button{
+		float: right;
+		border: 1px solid #15A4FA;
+		border-radius: 3px;
+	}
+	button:hover{
+		border: 1px solid #fff;
+	}
+}
+}
+
+footer{
+	background-color: $bgColor;
+	padding: 40px 0;
+	p{
+		margin-bottom: 0;
+	}
+	ul{
+		li{
+			a{
+				margin-left: 10px;
+				background-color: $secondaryColor;
+				color: #fff;
+				width: 35px;
+				height: 35px;
+				display: block;
+				text-align: center;
+				line-height: 35px;
+				border: 1px solid $secondaryColor;
+				@extend %transition;
+				&:hover{
+					background-color: transparent;
+					color: $secondaryColor;
+					border: 1px solid $secondaryColor;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 991px){
+	.overlay{
+		left:182px;
+	}
+}
+
+
+
